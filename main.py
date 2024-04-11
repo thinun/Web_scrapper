@@ -7,6 +7,6 @@ c = r.content
 soup = BeautifulSoup(c, "html.parser")
 all = soup.find_all('div', {'class': 'card mb-3'})
 
-
-h2 =all[0].find_all('h2')[0].text
-print(h2)
+for title in all:
+    t = title.find_all('h2')[0].text
+    print(t)
